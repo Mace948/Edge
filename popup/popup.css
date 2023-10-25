@@ -1,0 +1,30 @@
+body {
+  width: 350px;
+  height: 600px;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--background-color);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  background-color: transparent;
+
+  padding: 12px;
+}
+
+.object {
+  height: 60px;
+  width: 100%;
+
+  background-color: transparent;
+}
+
+.border {
+  border: solid 1px var(--border-color);
+  border-radius: 5px;
+}
