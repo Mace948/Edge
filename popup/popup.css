@@ -1,30 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+
   width: 350px;
   height: 600px;
 
   padding: 0;
   margin: 0;
 
+  color: var(--text-color);
   background-color: var(--background-color);
 }
 
 .container {
   height: 100%;
-  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
 
   background-color: transparent;
+  transition-duration: 0.5s;
 
   padding: 12px;
 }
 
 .object {
-  height: 60px;
-  width: 100%;
+  height: 70px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  padding: 0px 20px;
+  position: relative;
+  overflow: hidden;
 
   background-color: transparent;
+  transition-duration: 0.5s;
+}
+
+.object:hover {
+  border: solid 1px var(--border-color-light);
+}
+
+.object:active::before {
+  height: 0px;
+  width: 0px;
+  transition-duration: 0.3s;
+  border-radius: 0 50% 100% 0;
+}
+.object::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--background-color-light);
+  transition: 0.5s;
+  z-index: -1;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.menu-container {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  justify-content: flex-start;
+  top: 70px;
+  transform: translateY(1000px);
+  transition-duration: 0.5s;
+  flex-direction: column;
+  width: 326px;
+  height: 100%;
+  padding: 12px 12px;
+  position: absolute;
+}
+
+.object:hover::before {
+  height: 180%;
+}
+
+.active {
+  background-color: var(--background-color-light);
+}
+
+.title {
+  font-weight: 500;
+}
+
+.subtext {
+  color: var(--text-color-dark);
+  font-size: 13px;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.arrow {
+  font-size: 14px;
+  color: var(--text-color-dark);
 }
 
 .border {
   border: solid 1px var(--border-color);
   border-radius: 5px;
+}
+
+.right {
+  margin-left: auto;
 }
