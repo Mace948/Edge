@@ -5,5 +5,8 @@ function getMenu(object) {
   if (object.id === "adblock") {
     var menu = document.getElementById("adblock-menu");
   }
+  if (object.id === "custom-tab-menu") {
+    var menu = document.getElementById("custom-tab-menu-menu");
+  }
   return menu;
 }

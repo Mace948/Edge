@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#clock {
+  position: absolute;
+  left: 0px;
+  padding: 10px 12px;
+  top: 0px;
+  line-height: 0px;
+  color: white;
+  font-size: 9px;
+}
+
+#date {
+  font-weight: 500;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.search-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.logo {
+  width: 2.5vh;
+  padding-top: 3px;
+}
+
+.search-bar {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  outline: none;
+  position: absolute;
+  height: 2.3vh;
+  min-width: 26vw;
+  left: 50%;
+  border-radius: 5px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: rgb(40, 40, 40);
+  font-size: 15px;
+  transition-duration: 0.4s;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+form:focus-within > .search-button {
+  transform: translate(-50%, 40px);
+}
+
+.search-bar:hover {
+  min-width: 22vw;
+}
+
+.search-button:hover {
+  width: 5vh;
+  height: 5vh;
+}
+
+.search-button {
+  position: absolute;
+  left: 48.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 4vh;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border: none;
+  height: 4vh;
+}
+
+form:focus-within > .engine {
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  transform: translate(-50%, 40px) !important;
+}
+
+form:focus-within > .selected {
+  transform: translate(-50%, 40px);
+}
+
+.selected {
+  left: 51.5% !important;
+}
+
+::placeholder {
+  color: rgb(40, 40, 40);
+}

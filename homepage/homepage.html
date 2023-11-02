@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Tab</title>
+    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.bf7c5172d65b3f631ec80e8603c67193?rik=tFRYCC0yCT2Xyg&riu=http%3a%2f%2ffreevector.co%2fwp-content%2fuploads%2f2012%2f09%2f9282-home-button1.png&ehk=jNYtHpr1aGhOLGvzRW44mKe3cum%2fG9a8%2bxs42YMjhp8%3d&risl=&pid=ImgRaw&r=0" />
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <script src="../popup/Javascript/refresh.js"></script>
+    <script src="homepage.js"></script>
+    <script src="engine_select.js"></script>
+    <script src="../popup/Javascript/fontawesome.js"></script>
+  </head>
+  <body>
+    <div class="filter"></div>
+    <div class="search-container">
+      <form method="get" action="https://www.google.com/search" id="search-form">
+        <input type="text" class="search-bar" placeholder="Search" name="q" />
+        <button type="action" class="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button type="button" class="search-button engine" id="google">
+          <img src="https://www.salesforceben.com/wp-content/uploads/2021/03/google-logo-icon-PNG-Transparent-Background-2048x2048.png" class="logo" />
+        </button>
+        <button type="button" class="search-button engine" id="google scholar">
+          <img src="https://th.bing.com/th/id/OIP.MOtfKmX8_IDcAVvfi43B4QHaHa?pid=ImgDet&rs=1" class="logo" />
+        </button>
+        <button type="button" class="search-button engine" id="duckduckgo">
+          <img src="https://static-00.iconduck.com/assets.00/duckduckgo-icon-2048x2048-bibao3k0.png" class="logo" />
+        </button>
+        <button type="button" class="search-button engine" id="bing">
+          <img src="https://winaero.com/blog/wp-content/uploads/2020/10/Bing-icon-big-256.png" class="logo" />
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

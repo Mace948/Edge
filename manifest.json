@@ -6,6 +6,9 @@
   "description": "The only chrome extension you need.",
   "permissions": ["storage"],
   "host_permissions": ["<all_urls>"],
+  "chrome_url_overrides": {
+    "newtab": "homepage/homepage.html"
+  },
   "action": {
     "default_popup": "popup/popup.html"
   }
