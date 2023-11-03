@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edge</title>
+    <script src="Javascript/theme.js "></script>
     <script src="Javascript/refresh.js"></script>
     <script src="Javascript/load.js "></script>
     <script src="Javascript/open_close.js "></script>
@@ -68,46 +69,41 @@
     </div>
     <div class="wrapper">
       <div class="object border openable" id="2">
-        <i class="fa-solid fa-file icon"></i>
+        <i class="fa-solid fa-brush icon"></i>
         <p>
-          <span class="title">Custom Tab</span>
+          <span class="title">Themes</span>
           <br />
-          <span class="subtext">create your own homepage</span>
+          <span class="subtext">customize the looks</span>
         </p>
         <i class="fa-solid fa-angle-right icon right arrow"></i>
       </div>
-      <div class="object sub border hidden openable">
-        <p>
-          <span class="title">Background Image</span>
-          <br />
-          <span class="subtext">set background image, repeat...</span>
-        </p>
-      </div>
-      <div class="object sub-sub hidden border space-between">
-        <label class="custom-file-upload" for="background-picker"><span>Upload Image</span></label>
-        <input type="file" id="background-picker" accept="image/*" />
-        <div class="imgpreview">
-          <img src="" class="preview" />
-          <i class="fa-solid fa-xmark fa-lg"></i>
-        </div>
-      </div>
-      <div class="object sub-sub hidden border space-between">
-        <p>Background Repeat</p>
-        <label class="custom-checkbox border">
-          <input type="checkbox" id="background-repeat" checked="checked" />
-        </label>
-      </div>
-      <div class="object sub-sub hidden border space-between">
-        <p>Darken</p>
-        <input type="range" min="0" max="100" value="0" class="slider" id="darkSlider" />
-      </div>
-      <div class="object sub-sub hidden border space-between">
-        <p>Blur</p>
-        <input type="range" min="0" max="100" value="0" class="slider" id="blurSlider" />
-      </div>
       <div class="object sub hidden border space-between">
         <p>Background Color</p>
-        <input type="color" class="colorpicker" id="backgroundColorPicker" />
+        <input type="color" class="colorpicker" id="backgroundColorPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Background Color Light</p>
+        <input type="color" class="colorpicker" id="backgroundColorLightPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Text Color</p>
+        <input type="color" class="colorpicker" id="textColorPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Text Color Dark</p>
+        <input type="color" class="colorpicker" id="textColorDarkPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Border Color</p>
+        <input type="color" class="colorpicker" id="borderColorPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Border Color Light</p>
+        <input type="color" class="colorpicker" id="borderColorLightPickerTheme" />
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Accent Color</p>
+        <input type="color" class="colorpicker" id="accentColorPickerTheme" />
       </div>
     </div>
   </body>

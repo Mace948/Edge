@@ -68,7 +68,7 @@ input[type="checkbox"] {
   width: 16px;
   height: 16px;
   transition-duration: 0.4s;
-  background-color: rgb(30, 30, 30);
+  background-color: var(--border-color);
 }
 
 .custom-checkbox:hover:has(input[type="checkbox"]:not(:checked)) {
@@ -229,6 +229,10 @@ input[type="checkbox"] {
   height: 100%;
   padding: 12px 12px;
   position: absolute;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .object:hover::before {

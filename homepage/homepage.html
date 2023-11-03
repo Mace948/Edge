@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Tab</title>
     <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.bf7c5172d65b3f631ec80e8603c67193?rik=tFRYCC0yCT2Xyg&riu=http%3a%2f%2ffreevector.co%2fwp-content%2fuploads%2f2012%2f09%2f9282-home-button1.png&ehk=jNYtHpr1aGhOLGvzRW44mKe3cum%2fG9a8%2bxs42YMjhp8%3d&risl=&pid=ImgRaw&r=0" />
-    <link rel="stylesheet" type="text/css" href="homepage.css" />
     <script src="../popup/Javascript/refresh.js"></script>
-    <script src="homepage.js"></script>
+    <script src="../popup/Javascript/update_theme.js"></script>
+    <script src="add_shortcut.js"></script>
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
     <script src="engine_select.js"></script>
     <script src="../popup/Javascript/fontawesome.js"></script>
+    <script src="homepage.js"></script>
   </head>
   <body>
     <div class="filter"></div>
@@ -20,18 +22,22 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
         <button type="button" class="search-button engine" id="google">
-          <img src="https://www.salesforceben.com/wp-content/uploads/2021/03/google-logo-icon-PNG-Transparent-Background-2048x2048.png" class="logo" />
+          <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="logo" />
         </button>
         <button type="button" class="search-button engine" id="google scholar">
-          <img src="https://th.bing.com/th/id/OIP.MOtfKmX8_IDcAVvfi43B4QHaHa?pid=ImgDet&rs=1" class="logo" />
+          <img src="https://iconape.com/wp-content/png_logo_vector/google-scholar.png" class="logo" />
         </button>
         <button type="button" class="search-button engine" id="duckduckgo">
-          <img src="https://static-00.iconduck.com/assets.00/duckduckgo-icon-2048x2048-bibao3k0.png" class="logo" />
+          <img src="https://th.bing.com/th/id/R.7cf0b6d9f87a4f8a94142f1aef6b26d9?rik=NB4zdB6QwxguBg&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f5847f32fcef1014c0b5e4877.png&ehk=OuZv8iGX%2fuLmcYV0RA4KDY2e7P%2fdftnmYXto3sF8wNc%3d&risl=&pid=ImgRaw&r=0" class="logo" />
         </button>
         <button type="button" class="search-button engine" id="bing">
-          <img src="https://winaero.com/blog/wp-content/uploads/2020/10/Bing-icon-big-256.png" class="logo" />
+          <img src="https://th.bing.com/th/id/R.64b768599cb1d1d9d4ebf1348873c2a3?rik=GAiuseAKD9TJ1Q&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f623af41527d4946aceae2f79.png&ehk=DOpbDUCC3kWwbfziRmyNubP5BDMrUQm7wUKr65KoijM%3d&risl=&pid=ImgRaw&r=0" class="logo" />
         </button>
       </form>
     </div>
+    <button type="button" class="simple-button add">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="shortcut-container"></div>
   </body>
 </html>

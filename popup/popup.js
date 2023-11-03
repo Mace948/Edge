@@ -20,5 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("backgroundColorLight") === null) {
     localStorage.setItem("backgroundColorLight", "rgb(50, 50, 50)");
   }
+  loadAndUpdateColor("backgroundColorPickerTheme", "backgroundColor");
+  loadAndUpdateColor("borderColorPickerTheme", "borderColor");
+  loadAndUpdateColor("accentColorPickerTheme", "accentColor");
+  loadAndUpdateColor("textColorPickerTheme", "textColor");
+  loadAndUpdateColor("textColorDarkPickerTheme", "textColorDark");
+  loadAndUpdateColor("borderColorLightPickerTheme", "borderColorLight");
+  loadAndUpdateColor("backgroundColorLightPickerTheme", "backgroundColorLight");
   UpdateTheme();
 });

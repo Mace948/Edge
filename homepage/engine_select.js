@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   } else if (savedEngine === "bing") {
     document.getElementById("search-form").action = "https://www.bing.com/search?q=%s";
   }
-  console.log(selected);
   selected.classList.add("selected");
   engines = document.querySelectorAll(".engine");
 

@@ -43,4 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     input.style.width = `${input.scrollWidth - 30 - subtract}px`;
     subtract = 0;
   });
+
+  UpdateTheme();
 });

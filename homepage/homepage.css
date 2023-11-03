@@ -9,20 +9,6 @@ body {
   height: 100vh;
 }
 
-#clock {
-  position: absolute;
-  left: 0px;
-  padding: 10px 12px;
-  top: 0px;
-  line-height: 0px;
-  color: white;
-  font-size: 9px;
-}
-
-#date {
-  font-weight: 500;
-}
-
 .filter {
   position: absolute;
   top: 0;
@@ -42,23 +28,33 @@ body {
 }
 
 .logo {
-  width: 2.5vh;
-  padding-top: 3px;
+  width: 2.3vh;
+}
+
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -500px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .search-bar {
-  background-color: rgb(230, 230, 230);
+  background-color: var(--background-color);
   border: none;
+  animation: 0.7s ease-out 0s 1 grow;
   outline: none;
   position: absolute;
   height: 2.3vh;
   min-width: 26vw;
   left: 50%;
+  font-family: "Inter", sans-serif;
   border-radius: 5px;
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
-  color: rgb(40, 40, 40);
+  color: var(--text-color);
   font-size: 15px;
   transition-duration: 0.4s;
   text-align: center;
@@ -79,14 +75,117 @@ form:focus-within > .search-button {
   height: 5vh;
 }
 
+i {
+  color: var(--border-color-light);
+}
+
+.simple-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 3vh;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  background-color: var(--background-color);
+  animation: 0.8s ease-in-out 0s 1 grow;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+}
+
+.simple-button:hover {
+  width: 4vh;
+  height: 4vh;
+}
+
+.shortcut-container {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  margin-left: 4vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vh;
+  justify-content: flex-start;
+}
+
+.shortcut-setting {
+  position: absolute;
+  top: 6%;
+  height: 3.5vh;
+  display: flex;
+  width: 16vw;
+  align-items: center;
+  border-radius: 5px;
+  animation: 0.8s ease-in-out 0s 1 grow;
+  left: 50%;
+  top: 20px;
+  padding-left: 1vw;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  background-color: var(--background-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.shortcut-setting > input {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  width: 85%;
+}
+
+.fa-check {
+  color: var(--background-color);
+}
+
+.shortcut-setting > input:focus {
+  border: none;
+  outline: none;
+}
+
+.shortcut-setting > button {
+  background-color: var(--border-color-light);
+  border: none;
+  position: relative;
+  height: 100%;
+  width: 15%;
+}
+
+.shortcut-preview {
+  width: 1.6vh;
+}
+
+.shortcut {
+  transition-duration: 0.5s;
+  position: relative;
+}
+
+.add {
+  transition-duration: 0.5s;
+  z-index: 2;
+  rotate: 360deg;
+}
+
 .search-button {
   position: absolute;
+  animation: 0.8s ease-in-out 0s 1 grow;
   left: 48.5%;
+  background-color: var(--background-color);
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   width: 4vh;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border: none;
@@ -109,6 +208,10 @@ form:focus-within > .selected {
   left: 51.5% !important;
 }
 
+.hide {
+  left: -1000px;
+}
+
 ::placeholder {
-  color: rgb(40, 40, 40);
+  color: var(--border-color-light);
 }
