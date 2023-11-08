@@ -1,48 +1,65 @@
+// Import settings from localStorage and set their respective elements.
+
 document.addEventListener("DOMContentLoaded", function () {
-  const savedBackground = localStorage.getItem("backgroundImage");
-  const backgroundRepeat = localStorage.getItem("backgroundRepeat");
-  const backgroundDarken = localStorage.getItem("backgroundDarken");
-  const backgroundBlur = localStorage.getItem("backgroundBlur");
-  const backgroundColor = localStorage.getItem("homepageBackgroundColor");
-  const searchBarEnabled = localStorage.getItem("searchBarEnabled");
+  // Background settings from localStorage.
+  const savedBackgroundImage = localStorage.getItem("backgroundImage");
+  const savedBackgroundRepeat = localStorage.getItem("backgroundRepeat");
+  const savedBackgroundDarken = localStorage.getItem("backgroundDarken");
+  const savedBackgroundBlur = localStorage.getItem("backgroundBlur");
+  const savedBackgroundColor = localStorage.getItem("homepageBackgroundColor");
+  const savedSearchBarEnabled = localStorage.getItem("searchBarEnabled");
 
-  const filterDiv = document.querySelector(".filter");
+  const DOMSearchBar = document.querySelector(".search-bar");
+  localStorage.getItem("page") === "notepad" ? (DOMSearchBar.style.animation = "0.4s ease-out 0s 1 shrink") : (DOMSearchBar.style.animation = "0.6s ease-in-out 0s 1 SlideFromTop");
+  localStorage.setItem("page", "homepage");
 
-  if (savedBackground !== null) {
-    filterDiv.style.background = `url('${savedBackground}')`;
+  // Set Element Variables
+  const DOMFilterDiv = document.querySelector(".filter");
+  if (savedBackgroundImage !== null) {
+    DOMFilterDiv.style.background = `url('${savedBackgroundImage}')`;
   }
-  if (backgroundRepeat === "false") {
-    filterDiv.style.backgroundRepeat = "no-repeat";
-    filterDiv.style.backgroundSize = "cover";
+
+  if (savedBackgroundRepeat === "false") {
+    DOMFilterDiv.style.backgroundRepeat = "no-repeat";
+    DOMFilterDiv.style.backgroundSize = "cover";
   } else {
-    filterDiv.style.backgroundRepeat = "repeat";
-    filterDiv.style.backgroundSize = "auto";
-  }
-  if (savedBackground === null) {
-    filterDiv.style.background = "" + backgroundColor;
+    DOMFilterDiv.style.backgroundRepeat = "repeat";
+    DOMFilterDiv.style.backgroundSize = "auto";
   }
 
-  var percentage = ((parseFloat(backgroundDarken) - 100) / (0 - 100)) * 100;
-  filterDiv.style.filter = `blur(${backgroundBlur}px) brightness(${percentage}%)`;
-  filterDiv.style.transform = "scale(120%)";
+  if (savedBackgroundImage === null) {
+    DOMFilterDiv.style.background = "" + savedBackgroundColor;
+  }
 
-  const searchBar = document.querySelector(".search-container");
-  if (searchBarEnabled === "true") {
-    searchBar.style.display = "block";
+  // Set Blur and Darken properties.
+  var percentage = ((parseFloat(savedBackgroundDarken) - 100) / (0 - 100)) * 100;
+  DOMFilterDiv.style.filter = `blur(${savedBackgroundBlur}px) brightness(${percentage}%)`;
+  DOMFilterDiv.style.transform = "scale(120%)";
+
+  // Enable / Disable search bar.
+  const DOMSearchContainer = document.getElementById("search-form");
+  if (savedSearchBarEnabled === "true") {
+    DOMSearchContainer.style.display = "block";
   } else {
-    searchBar.style.display = "none";
+    DOMSearchContainer.style.display = "none";
   }
 
-  const input = document.querySelector(".search-bar");
-
-  let subtract = 0;
-  input.addEventListener("input", function (event) {
-    if (event["inputType"] == "deleteContentBackward") {
-      subtract += 30;
-    }
-    input.style.width = `${input.scrollWidth - 30 - subtract}px`;
-    subtract = 0;
+  // Update searh bar on user input.
+  console.log(document.referrer);
+  DOMSearchBar.addEventListener("input", function (event) {
+    UpdateSearch(event, DOMSearchBar);
   });
 
+  // Update Themes
   UpdateTheme();
 });
+
+// Increase or decrease the width of the search bar respectively.
+function UpdateSearch(event, searchBar) {
+  let subtract = 0;
+  if (event["inputType"] == "deleteContentBackward") {
+    subtract += 30;
+  }
+  searchBar.style.width = `${searchBar.scrollWidth - 30 - subtract}px`;
+  subtract = 0;
+}

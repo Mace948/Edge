@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
   let boolValue = stringValue === "true";
   backgroundRepeatCheckbox.checked = boolValue;
 
+  const adblockCheckbox = document.getElementById("adblock");
+  stringValue = localStorage.getItem("adblock");
+  boolValue = stringValue === "true";
+  adblockCheckbox.checked = boolValue;
+
   const darkSlider = document.getElementById("darkSlider");
   darkSlider.value = localStorage.getItem("backgroundDarken");
 

@@ -165,10 +165,13 @@ input[type="checkbox"] {
   transform: translateX(400px) !important;
 }
 
-.wrapper:nth-last-child(1):has(.active) {
+.wrapper:nth-last-child(2):has(.active) {
   transform: translateY(-88px);
 }
 
+.wrapper:nth-last-child(1):has(.active) {
+  transform: translateY(-170px);
+}
 .object {
   height: 70px;
   width: 280px;

@@ -6,6 +6,7 @@
     <title>Edge</title>
     <script src="Javascript/theme.js "></script>
     <script src="Javascript/refresh.js"></script>
+    <script src="Javascript/adblock.js"></script>
     <script src="Javascript/load.js "></script>
     <script src="Javascript/open_close.js "></script>
     <script src="Javascript/update_theme.js"></script>
@@ -104,6 +105,23 @@
       <div class="object sub hidden border space-between">
         <p>Accent Color</p>
         <input type="color" class="colorpicker" id="accentColorPickerTheme" />
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="object border openable" id="3">
+        <i class="fa-solid fa-shield-halved icon"></i>
+        <p>
+          <span class="title">Adblock</span>
+          <br />
+          <span class="subtext">remove tracking</span>
+        </p>
+        <i class="fa-solid fa-angle-right icon right arrow"></i>
+      </div>
+      <div class="object sub hidden border space-between">
+        <p>Enable / Disable</p>
+        <label class="custom-checkbox border">
+          <input type="checkbox" id="adblock" />
+        </label>
       </div>
     </div>
   </body>

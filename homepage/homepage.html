@@ -3,41 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>New Tab</title>
-    <link rel="icon" type="image/png" href="https://th.bing.com/th/id/R.bf7c5172d65b3f631ec80e8603c67193?rik=tFRYCC0yCT2Xyg&riu=http%3a%2f%2ffreevector.co%2fwp-content%2fuploads%2f2012%2f09%2f9282-home-button1.png&ehk=jNYtHpr1aGhOLGvzRW44mKe3cum%2fG9a8%2bxs42YMjhp8%3d&risl=&pid=ImgRaw&r=0" />
+    <link rel="icon" type="image/png" href="https://static-00.iconduck.com/assets.00/edge-icon-512x512-pf7lezqp.png" />
+
+    <script type="text/javascript" src="focus.js"></script>
     <script src="../popup/Javascript/refresh.js"></script>
+    <script src="../popup/Javascript/adblock.js"></script>
     <script src="../popup/Javascript/update_theme.js"></script>
     <script src="add_shortcut.js"></script>
-    <link rel="stylesheet" type="text/css" href="homepage.css" />
-    <script src="engine_select.js"></script>
     <script src="../popup/Javascript/fontawesome.js"></script>
+    <script src="engine_select.js"></script>
+    <script src="rotate_placeholder_tips.js"></script>
     <script src="homepage.js"></script>
+    <script src="auto_search.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
   </head>
   <body>
     <div class="filter"></div>
-    <div class="search-container">
-      <form method="get" action="https://www.google.com/search" id="search-form">
-        <input type="text" class="search-bar" placeholder="Search" name="q" />
-        <button type="action" class="search-button">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <button type="button" class="search-button engine" id="google">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="logo" />
-        </button>
-        <button type="button" class="search-button engine" id="google scholar">
-          <img src="https://iconape.com/wp-content/png_logo_vector/google-scholar.png" class="logo" />
-        </button>
-        <button type="button" class="search-button engine" id="duckduckgo">
-          <img src="https://th.bing.com/th/id/R.7cf0b6d9f87a4f8a94142f1aef6b26d9?rik=NB4zdB6QwxguBg&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f5847f32fcef1014c0b5e4877.png&ehk=OuZv8iGX%2fuLmcYV0RA4KDY2e7P%2fdftnmYXto3sF8wNc%3d&risl=&pid=ImgRaw&r=0" class="logo" />
-        </button>
-        <button type="button" class="search-button engine" id="bing">
-          <img src="https://th.bing.com/th/id/R.64b768599cb1d1d9d4ebf1348873c2a3?rik=GAiuseAKD9TJ1Q&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f623af41527d4946aceae2f79.png&ehk=DOpbDUCC3kWwbfziRmyNubP5BDMrUQm7wUKr65KoijM%3d&risl=&pid=ImgRaw&r=0" class="logo" />
-        </button>
-      </form>
-    </div>
-    <button type="button" class="simple-button add">
+
+    <form method="get" action="https://www.google.com/search" id="search-form">
+      <input type="text" class="search-bar" placeholder="Search" name="q" id="search" />
+      <button type="action" class="search-button search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <button type="button" class="search-button engine" id="google">
+        <img src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-png-transparent.png" class="logo" />
+      </button>
+      <button type="button" class="search-button engine" id="google scholar">
+        <img src="https://iconape.com/wp-content/png_logo_vector/google-scholar.png" class="logo" />
+      </button>
+      <button type="button" class="search-button engine" id="duckduckgo">
+        <img src="https://th.bing.com/th/id/R.7cf0b6d9f87a4f8a94142f1aef6b26d9?rik=NB4zdB6QwxguBg&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f5847f32fcef1014c0b5e4877.png&ehk=OuZv8iGX%2fuLmcYV0RA4KDY2e7P%2fdftnmYXto3sF8wNc%3d&risl=&pid=ImgRaw&r=0" class="logo" />
+      </button>
+      <button type="button" class="search-button engine" id="bing">
+        <img src="https://th.bing.com/th/id/R.64b768599cb1d1d9d4ebf1348873c2a3?rik=GAiuseAKD9TJ1Q&riu=http%3a%2f%2fassets.stickpng.com%2fimages%2f623af41527d4946aceae2f79.png&ehk=DOpbDUCC3kWwbfziRmyNubP5BDMrUQm7wUKr65KoijM%3d&risl=&pid=ImgRaw&r=0" class="logo" />
+      </button>
+      <button type="button" class="search-button engine" id="youtube">
+        <img src="https://images.vexels.com/media/users/3/137425/isolated/preview/f2ea1ded4d037633f687ee389a571086-youtube-icon-logo-by-vexels.png" class="logo" />
+      </button>
+    </form>
+
+    <button type="button" class="add">
       <i class="fa-solid fa-plus"></i>
     </button>
+
     <div class="shortcut-container"></div>
   </body>
 </html>

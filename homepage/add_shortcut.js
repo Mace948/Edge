@@ -70,19 +70,25 @@ function createShortcut(url) {
     event.preventDefault();
     if (shortcutDiv.classList.contains("in-use")) return false;
     shortcutDiv.classList.add("in-use");
-    form = document.createElement("div");
-    input = document.createElement("input");
+
+    input = document.querySelector(".search-bar");
+    input.style.color = "var(--border-color-light)";
     input.value = shortcutDiv.href;
+
+    button = document.createElement("button");
+    button.classList.add("setURL");
+
     icon = document.createElement("i");
     icon.classList.add("fa-solid");
     icon.classList.add("fa-check");
-    button = document.createElement("button");
+
+    document.querySelector(".search").type = "button";
     button.addEventListener("click", function () {
       let shortcuts = localStorage.getItem("shortcuts");
       let url = input.value;
       if (url === "") {
         shortcutDiv.classList.remove("in-use");
-        form.remove();
+        button.remove();
         shortcuts = shortcuts.split(" ");
         var index = shortcuts.indexOf(shortcutDiv.href);
         if (index !== -1) {
@@ -105,12 +111,12 @@ function createShortcut(url) {
       }
       shortcuts = shortcuts.join(" ");
       localStorage.setItem("shortcuts", shortcuts);
-      form.remove();
+
+      button.remove();
+      document.querySelector(".search-bar").value = "";
+      document.querySelector(".search").type = "action";
     });
     button.appendChild(icon);
-    form.appendChild(input);
-    form.appendChild(button);
-    form.classList.add("shortcut-setting");
-    document.body.appendChild(form);
+    document.getElementById("search-form").appendChild(button);
   });
 }

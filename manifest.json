@@ -4,12 +4,25 @@
   "version": "1.0",
   "author": "Mace",
   "description": "The only chrome extension you need.",
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs", "declarativeNetRequest", "alarms", "unlimitedStorage"],
   "host_permissions": ["<all_urls>"],
   "chrome_url_overrides": {
     "newtab": "homepage/homepage.html"
   },
   "action": {
     "default_popup": "popup/popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
   }
 }

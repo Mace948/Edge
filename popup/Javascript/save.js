@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
     refresh();
   });
 
+  const adblockCheckbox = document.getElementById("adblock");
+  adblockCheckbox.addEventListener("change", function () {
+    localStorage.setItem("adblock", adblockCheckbox.checked);
+    this.checked ? enableAdblock : disableAdblock;
+    refresh();
+  });
+
   const searchBarCheckbox = document.getElementById("search-bar");
   searchBarCheckbox.addEventListener("change", function () {
     localStorage.setItem("searchBarEnabled", searchBarCheckbox.checked);
