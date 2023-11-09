@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notepad</title>
     <script src="../popup/Javascript/update_theme.js"></script>
+    <script src="styling.js"></script>
     <script src="../popup/Javascript/fontawesome.js"></script>
     <script src="save.js"></script>
     <script src="notepad.js"></script>
@@ -15,8 +16,21 @@
     <button type="button" class="save">
       <i class="fa-solid fa-check"></i>
     </button>
-    <div contenteditable="true" class="input title">Untitled</div>
+    <div contenteditable="true" class="input title" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">Untitled</div>
     <div contenteditable="true" class="input body" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">Empty page</div>
     <div class="footer"></div>
+
+    <div class="context-menu">
+      <button id="paragraphFontSize"><i class="fa-solid fa-paragraph"></i></button>
+      <button id="oneFontSize"><i class="fa-solid fa-1"></i></button>
+      <button id="twoFontSize"><i class="fa-solid fa-2"></i></button>
+      <button id="threeFontSize"><i class="fa-solid fa-3"></i></button>
+      <button id="bold"><i class="fa-solid fa-bold"></i></button>
+      <button id="italic"><i class="fa-solid fa-italic"></i></button>
+      <button id="underline"><i class="fa-solid fa-underline"></i></button>
+      <button id="strikeThrough"><i class="fa-solid fa-strikethrough"></i></button>
+      <button id="subscript"><i class="fa-solid fa-subscript"></i></button>
+      <button id="superscript"><i class="fa-solid fa-superscript"></i></button>
+    </div>
   </body>
 </html>

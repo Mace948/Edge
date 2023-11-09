@@ -42,15 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Usage example
   const inputField = document.querySelector(".search-bar");
-  const placeholders = ["search", "the . operator allows for private search.", "try .secrets.", "the / allows for commands.", "try /adblock.", "search with the first letter of any bookmark."];
+  const placeholders = ["search", "use the arrow keys to search history.", "the . operator allows for private search.", "try .secrets.", "the / allows for commands.", "try /adblock.", "search with the first letter of any bookmark."];
 
   let currentIndex = 0;
+  const shuffledPlaceholders = [...placeholders].sort(() => Math.random() - 0.5);
 
   function runAnimation() {
-    if (currentIndex >= placeholders.length) {
+    if (currentIndex >= shuffledPlaceholders.length) {
       currentIndex = 0; // Reset index for repeated animations
     }
-    var newPlaceholder = placeholders[currentIndex];
+    var newPlaceholder = shuffledPlaceholders[currentIndex];
     newPlaceholder === "search" ? (newPlaceholder = `search ${localStorage.getItem("searchEngine")}.`) : (newPlaceholder = newPlaceholder);
     animatePlaceholder(inputField, newPlaceholder, () => {
       // Increment the index and run the animation again

@@ -37,6 +37,8 @@ body {
   top: 0;
   left: 50%;
   font-size: 2.5em;
+  white-space: nowrap;
+  overflow: hidden;
   width: 35vw;
   color: var(--border-color);
   font-weight: 700;
@@ -113,4 +115,27 @@ a:hover {
   width: 5vh;
   transition-duration: 0.3s;
   height: 5vh;
+}
+.context-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  left: 100vw;
+  top: 100vh;
+  transition-duration: 0.4s;
+  position: absolute;
+}
+
+.context-menu button {
+  position: relative;
+  left: 0;
+  top: 0;
+  transform: none;
+}
+::selection {
+  background-color: rgb(37, 87, 122);
 }
